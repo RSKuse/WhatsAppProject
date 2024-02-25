@@ -53,26 +53,47 @@ class ChatsTableViewCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    lazy var labelStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [nameLabel, recentMessageLabel])
-        stackView.distribution = .fillProportionally
-        stackView.spacing = 5.0
-        stackView.alignment = .leading
-        stackView.axis = .vertical
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+  
+    lazy var messageStatusImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Group 1-2")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
-    lazy var userStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [contactImageView, labelStackView,])
+    lazy var recentMessageStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [messageStatusImageView, recentMessageLabel])
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
         stackView.spacing = 10.0
         stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
+        return  stackView
     }()
+    
+//    lazy var labelStackView: UIStackView = {
+//        let stackView = UIStackView(arrangedSubviews: [nameLabel, recentMessageStackView])
+//        stackView.distribution = .fillProportionally
+//        stackView.spacing = 5.0
+//        stackView.alignment = .leading
+//        stackView.axis = .vertical
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        return stackView
+//    }()
+    
+//    lazy var userStackView: UIStackView = {
+//        let stackView = UIStackView(arrangedSubviews: [contactImageView, labelStackView,])
+//        stackView.axis = .horizontal
+//        stackView.distribution = .fillProportionally
+//        stackView.spacing = 10.0
+//        stackView.alignment = .leading
+//        stackView.translatesAutoresizingMaskIntoConstraints = false
+//        return stackView
+//    }()
+    
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
@@ -83,18 +104,30 @@ class ChatsTableViewCell: UITableViewCell {
     func setupUI() {
         addSubview(contactImageView)
         addSubview(timeStampLabel)
-        addSubview(userStackView)
+        addSubview(recentMessageStackView)
+        addSubview(nameLabel)
+        
         
         contactImageView.heightAnchor.constraint(equalToConstant: 64).isActive = true
         contactImageView.widthAnchor.constraint(equalToConstant: 64).isActive = true
         contactImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
         contactImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
-        userStackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        userStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        userStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
+      
         timeStampLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
+        timeStampLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        
+        nameLabel.leftAnchor.constraint(equalTo: contactImageView.rightAnchor, constant: 14).isActive = true
+        nameLabel.centerYAnchor.constraint(equalTo: timeStampLabel.centerYAnchor).isActive = true
+        nameLabel.rightAnchor.constraint(equalTo: timeStampLabel.leftAnchor, constant: -16).isActive = true
+        
+        
+        recentMessageStackView.leftAnchor.constraint(equalTo: nameLabel.leftAnchor).isActive = true
+        recentMessageStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
+        recentMessageStackView.topAnchor.constraint(equalTo:nameLabel.bottomAnchor, constant: 4).isActive = true
+        
+
+        
+        
    
     }
     
