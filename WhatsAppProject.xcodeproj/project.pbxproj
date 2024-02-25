@@ -68,7 +68,6 @@
 			children = (
 				F39228D12B87930C003C9A81 /* AppDelegate.swift */,
 				F39228EC2B87E198003C9A81 /* TabBarViewControllers */,
-				F39228E92B87DE14003C9A81 /* HomeViewController */,
 				F39228DA2B87930E003C9A81 /* Assets.xcassets */,
 				F39228DC2B87930E003C9A81 /* LaunchScreen.storyboard */,
 				F39228DF2B87930E003C9A81 /* Info.plist */,
@@ -93,6 +92,7 @@
 				F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */,
 				F39228ED2B87E1BF003C9A81 /* UpdateViewController.swift */,
 				F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */,
+				F39228E92B87DE14003C9A81 /* HomeViewController */,
 				F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */,
 			);
 			path = TabBarViewControllers;
