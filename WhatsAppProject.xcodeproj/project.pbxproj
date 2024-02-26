@@ -18,6 +18,7 @@
 		F39228F02B87E1D3003C9A81 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */; };
 		F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */; };
 		F39228F42B87E1F3003C9A81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */; };
+		F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
 		F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedChatsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				F39228E72B87D2E5003C9A81 /* ChatsTableViewCell.swift */,
+				F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */,
 				F39228E52B87B8E6003C9A81 /* HomeViewController+TableView.swift */,
 				F39228D52B87930C003C9A81 /* HomeViewController.swift */,
 			);
@@ -91,9 +94,9 @@
 				F39228EA2B87DE6E003C9A81 /* TabBarControllers.swift */,
 				F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */,
 				F39228ED2B87E1BF003C9A81 /* UpdateViewController.swift */,
+				F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */,
 				F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */,
 				F39228E92B87DE14003C9A81 /* HomeViewController */,
-				F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */,
 			);
 			path = TabBarViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				F39228D22B87930C003C9A81 /* AppDelegate.swift in Sources */,
 				F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */,
 				F39228EE2B87E1BF003C9A81 /* UpdateViewController.swift in Sources */,
+				F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */,
 				F39228F42B87E1F3003C9A81 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

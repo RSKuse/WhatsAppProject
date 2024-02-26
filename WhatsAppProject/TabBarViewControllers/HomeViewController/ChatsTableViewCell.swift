@@ -33,13 +33,13 @@ class ChatsTableViewCell: UITableViewCell {
     lazy var recentMessageLabel: UILabel = {
        let label = UILabel()
         var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.5
+        paragraphStyle.lineHeightMultiple = 1.25
         label.textColor = .systemGray2
-        let attributedString = NSMutableAttributedString(string: "The first step you can do to get started is set up the projects. GitHub repo, the tab bars.")
+        let attributedString = NSMutableAttributedString(string: "Banking got stuck in the 90's. We are bringing it to today and the future.🌍")
         label.attributedText = attributedString
-        label.lineBreakMode = .byWordWrapping
+        label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 2
-        label.font = UIFont.systemFont(ofSize: 12, weight: UIFont.Weight.regular)
+        label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -47,7 +47,7 @@ class ChatsTableViewCell: UITableViewCell {
     lazy var timeStampLabel: UILabel = {
        let label = UILabel()
         label.text = "yesterday"
-        label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
+        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
         label.textColor = UIColor.gray
         label.textAlignment = .right
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -64,14 +64,42 @@ class ChatsTableViewCell: UITableViewCell {
     }()
     
     lazy var recentMessageStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [messageStatusImageView, recentMessageLabel])
+        let stackView = UIStackView(arrangedSubviews: [messageStatusImageView, photoIconImageView, recentMessageLabel])
         stackView.axis = .horizontal
         stackView.distribution = .fillProportionally
-        stackView.spacing = 10.0
+        stackView.spacing = 6
         stackView.alignment = .leading
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return  stackView
     }()
+    
+    lazy var photoIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_camera-2")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    lazy var verificationIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "ic_verified")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    lazy var markMessagesIconImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Ellipse 6")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     
 //    lazy var labelStackView: UIStackView = {
 //        let stackView = UIStackView(arrangedSubviews: [nameLabel, recentMessageStackView])
@@ -106,6 +134,8 @@ class ChatsTableViewCell: UITableViewCell {
         addSubview(timeStampLabel)
         addSubview(recentMessageStackView)
         addSubview(nameLabel)
+        addSubview(markMessagesIconImageView)
+        addSubview(verificationIconImageView)
         
         
         contactImageView.heightAnchor.constraint(equalToConstant: 64).isActive = true
@@ -117,13 +147,25 @@ class ChatsTableViewCell: UITableViewCell {
         timeStampLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         
         nameLabel.leftAnchor.constraint(equalTo: contactImageView.rightAnchor, constant: 14).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         nameLabel.centerYAnchor.constraint(equalTo: timeStampLabel.centerYAnchor).isActive = true
-        nameLabel.rightAnchor.constraint(equalTo: timeStampLabel.leftAnchor, constant: -16).isActive = true
+        //nameLabel.rightAnchor.constraint(equalTo: timeStampLabel.leftAnchor, constant: -16).isActive = true
         
         
         recentMessageStackView.leftAnchor.constraint(equalTo: nameLabel.leftAnchor).isActive = true
-        recentMessageStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        recentMessageStackView.topAnchor.constraint(equalTo:nameLabel.bottomAnchor, constant: 4).isActive = true
+        recentMessageStackView.rightAnchor.constraint(equalTo:rightAnchor, constant: -54).isActive = true
+        recentMessageStackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4).isActive = true
+        //recentMessageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: -4).isActive = true
+        //recentMessageStackView.centerYAnchor.constraint(equalTo: markMessagesIconImageView.centerYAnchor).isActive = true
+        recentMessageStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 11).isActive = true
+        
+        markMessagesIconImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
+        markMessagesIconImageView.topAnchor.constraint(equalTo: timeStampLabel.bottomAnchor, constant: 6).isActive = true
+        //markMessagesIconImageView.centerYAnchor.constraint(equalTo: recentMessageStackView.centerYAnchor).isActive = true
+        
+        verificationIconImageView.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 10).isActive = true
+        verificationIconImageView.centerYAnchor.constraint(equalTo: nameLabel.centerYAnchor).isActive = true
+        //verificationIconImageView.bottomAnchor.constraint(equalTo: recentMessageStackView.topAnchor, constant: -12).isActive = true
         
 
         

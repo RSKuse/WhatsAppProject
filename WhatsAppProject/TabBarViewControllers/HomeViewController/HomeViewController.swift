@@ -19,7 +19,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     lazy var addClickButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "plus")
+        let icon = UIImage(named: "ic_add")
         button.setImage(icon, for: .normal)
         button.clipsToBounds = true
         button.imageView?.contentMode = .scaleToFill
@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     lazy var cameraClickButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "icon_messages")
+        let icon = UIImage(named: "ic_camera")
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     lazy var selectClickButton: UIButton = {
         let button = UIButton()
-        let icon = UIImage(named: "icon_notification")
+        let icon = UIImage(named: "ic_more")
         button.setImage(icon, for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -82,6 +82,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func registerCell() {
         whatsappTableView.register(ChatsTableViewCell.self, forCellReuseIdentifier: "ChatsTableViewCellID")
+        whatsappTableView.register(ArchivedChatsTableViewCell.self, forCellReuseIdentifier: "ArchivedChatsTableViewCellID")
         
     }
     
