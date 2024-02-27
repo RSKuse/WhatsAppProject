@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 
 extension HomeViewController {
-    
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 40
@@ -30,7 +29,6 @@ extension HomeViewController {
         } else {
             return 7
         }
-   
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,6 +42,7 @@ extension HomeViewController {
             let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCellID", for: indexPath) as!
             ChatsTableViewCell
             if indexPath.row == 0 {
+                chatCell.messageStatusImageView.isHidden = true
                 chatCell.messageStatusImageView.isHidden = true
                 chatCell.photoIconImageView.isHidden = true
                 chatCell.markMessagesIconImageView.isHidden = true
@@ -61,7 +60,6 @@ extension HomeViewController {
                 chatCell.photoIconImageView.isHidden = true
                 chatCell.markMessagesIconImageView.isHidden = true
                 chatCell.verificationIconImageView.isHidden = true
-
     
             } else if indexPath.row == 3 {
                 chatCell.messageStatusImageView.image = UIImage(named: "ic_missed_call")
@@ -82,7 +80,7 @@ extension HomeViewController {
                 chatCell.markMessagesIconImageView.isHidden = true
                 chatCell.verificationIconImageView.isHidden = true
     
-            } 
+            }
             return chatCell
             
                 
@@ -92,30 +90,8 @@ extension HomeViewController {
             
         }
     
-     
-    }
+}
     
     
     
     
-    
-    
-
-
-
-
-
-//let archiveCell = tableView.dequeueReusableCell(withIdentifier: "ArchivedChatsTableViewCellID", for: indexPath) as! ArchivedChatsTableViewCell
-//
-//if indexPath.row == 1 {
-//    chatCell.messageStatusImageView.image = UIImage(named: "ic_missed_call")
-//}
-//if indexPath.row == 2 {
-//    
-//    chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
-//    chatCell.messageStatusImageView.tintColor = .black
-//    
-//}
-//    
-//return chatCell
-//}

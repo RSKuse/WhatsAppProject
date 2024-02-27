@@ -8,6 +8,13 @@
 import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+//    var whatsappChatArray: [WhatsappChatModel] = [
+//        WhatsappChatModel(senderImage: UIImage(named: "Tabitha Potter")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Tabitha Potter", senderLastMessage: "We need to change something. Or we need to do it ngenye inglela. I just le...", lastMessageTimeStamp: "05:16"),
+//        WhatsappChatModel(senderImage: UIImage(named: "Maximmilian")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Nkosenhle", senderLastMessage: "Sharp Sharp. No stress.", lastMessageTimeStamp: "Yesterday"),
+//        WhatsappChatModel(senderImage: UIImage(named: "karennne")!, senderIcon: UIImage(named: "ic_missed_call")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Kimberley", senderLastMessage: "Sharp Sharp. No stress.", lastMessageTimeStamp: "Tuesday")
+//    ]
+ 
+    
     lazy var whatsappTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.delegate = self

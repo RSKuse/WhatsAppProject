@@ -19,6 +19,7 @@
 		F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */; };
 		F39228F42B87E1F3003C9A81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */; };
 		F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */; };
+		F39228FA2B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
 		F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedChatsTableViewCell.swift; sourceTree = "<group>"; };
+		F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappChatModelStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				F39228E72B87D2E5003C9A81 /* ChatsTableViewCell.swift */,
 				F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */,
 				F39228E52B87B8E6003C9A81 /* HomeViewController+TableView.swift */,
+				F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */,
 				F39228D52B87930C003C9A81 /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
@@ -174,6 +177,7 @@
 				F39228E62B87B8E6003C9A81 /* HomeViewController+TableView.swift in Sources */,
 				F39228E82B87D2E5003C9A81 /* ChatsTableViewCell.swift in Sources */,
 				F39228F02B87E1D3003C9A81 /* CallsViewController.swift in Sources */,
+				F39228FA2B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift in Sources */,
 				F39228D62B87930C003C9A81 /* HomeViewController.swift in Sources */,
 				F39228EB2B87DE6E003C9A81 /* TabBarControllers.swift in Sources */,
 				F39228D22B87930C003C9A81 /* AppDelegate.swift in Sources */,

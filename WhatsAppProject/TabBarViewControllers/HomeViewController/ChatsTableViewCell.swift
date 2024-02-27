@@ -32,18 +32,23 @@ class ChatsTableViewCell: UITableViewCell {
     
     lazy var recentMessageLabel: UILabel = {
        let label = UILabel()
+        //label.frame = CGRect(x: 0, y: 0, width: 270, height: 40)
         var paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineHeightMultiple = 1.25
-        label.textColor = .systemGray2
-        let attributedString = NSMutableAttributedString(string: "Banking got stuck in the 90's. We are bringing it to today and the future.🌍")
+        paragraphStyle.lineHeightMultiple = 1.05
+        label.textColor = UIColor(red: 0.541, green: 0.537, blue: 0.557, alpha: 1)
+        let attributedString = NSMutableAttributedString(string: "We need to change something. Or we\nneed to do it ngenye inglela. I just le...", attributes: [NSAttributedString.Key.kern: -0.4, NSAttributedString.Key.paragraphStyle: paragraphStyle])
         label.attributedText = attributedString
         label.lineBreakMode = .byTruncatingTail
         label.numberOfLines = 2
-        label.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
+        label.font = UIFont(name: "SFProText-Regular", size: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    
+    
+
+
     lazy var timeStampLabel: UILabel = {
        let label = UILabel()
         label.text = "yesterday"
@@ -153,7 +158,7 @@ class ChatsTableViewCell: UITableViewCell {
         
         
         recentMessageStackView.leftAnchor.constraint(equalTo: nameLabel.leftAnchor).isActive = true
-        recentMessageStackView.rightAnchor.constraint(equalTo:rightAnchor, constant: -54).isActive = true
+        recentMessageStackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -25.5).isActive = true
         recentMessageStackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4).isActive = true
         //recentMessageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: -4).isActive = true
         //recentMessageStackView.centerYAnchor.constraint(equalTo: markMessagesIconImageView.centerYAnchor).isActive = true
@@ -161,6 +166,8 @@ class ChatsTableViewCell: UITableViewCell {
         
         markMessagesIconImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
         markMessagesIconImageView.topAnchor.constraint(equalTo: timeStampLabel.bottomAnchor, constant: 6).isActive = true
+        
+        
         //markMessagesIconImageView.centerYAnchor.constraint(equalTo: recentMessageStackView.centerYAnchor).isActive = true
         
         verificationIconImageView.leftAnchor.constraint(equalTo: nameLabel.rightAnchor, constant: 10).isActive = true
