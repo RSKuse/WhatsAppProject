@@ -25,8 +25,6 @@ struct NetflixShowD{
     
 }
 
-
-
 struct UberEatsShopStruct {
     let name: String
     let rating: Double
@@ -46,15 +44,92 @@ struct UberEatsShopStruct {
     let breakfastHours: String
     let lunchHours: String
     let dinnerHours: String
+    let coordinates: ShopCoordinates
+}
 
+struct ShopCoordinates {
+    var latitude: Double
+    var long: Double
 }
 
 
-//struct Facebook {
-//    let name: String
-//    let menu: String
-//    let rating: Int
-//    let deliveryTime: Date
-//    let imageURL: String
-//}
 
+struct FacebookPost {
+    let postText: String
+    let photos: [String]
+    let videos: [String]
+    let timestamp: Date
+    let isMuted: Bool
+    let isAdvert: Bool
+    let likesCount: Int
+    let group: String
+//    let likesCount: Int
+    let commentsCount: Int
+    let sharesCount: Int
+//    let commentsCount: Int
+//    let sharesCount: Int
+    let privacySettings: PrivacySettings
+    let tags: [String]
+    let location: String
+    let otherMedia: [String]
+    let poll: Poll
+    let comments: [Comment]
+//    let repliesToComments: [CommentReply]
+    let hashtags: [String]
+    let feelings: String
+    let links: [Link]
+    let eventInvitation: EventInvitation
+    let postInsights: PostInsights
+    
+}
+    
+struct PrivacySettings {
+    var isPublic: Bool
+    var friendsOnly: Bool
+    var custom:[String]
+}
+
+struct CommentReply {
+    let replyId: String
+    let commentId: String
+    let userId: String
+    let userName: String
+    let content: String
+    let timestamp: Date
+    
+}
+struct Comment {
+    let commentId: String
+    let userId: String
+    let userName: String
+    let content: String
+    let timestamp: Date
+  
+}
+
+struct Link {
+    let url: String
+    let title: String
+    let description: String
+    let thumbnailURL: String?
+    
+}
+
+struct EventInvitation {
+    let eventName: String
+    let eventDate: Date
+    let eventLocation: String
+    
+}
+
+struct PostInsights {
+    let reach: Int
+    let engagement: Int
+    let impressions: Int
+    
+}
+struct Poll {
+    let question: String
+    let options: [String]
+    let results: [Int]
+}
