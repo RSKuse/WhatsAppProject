@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 struct WhatsappChatModel {
-    let senderImage: UIImage
+    let senderProfileImage: UIImage
     let senderIcon: UIImage
     let markReadIcon: UIImage
     let senderName: String
     let senderLastMessage: String
-    let lastMessageTimeStamp: String
+    let lastMessageTimeStamp: Date
 }
