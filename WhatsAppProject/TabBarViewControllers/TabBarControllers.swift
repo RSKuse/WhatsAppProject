@@ -16,6 +16,7 @@ class TabBarController: UITabBarController {
         self.view.backgroundColor = .white
         setupTabBar()
         setupViewControllers()
+        selectedIndex = 3
     }
     
     func setupTabBar() {
