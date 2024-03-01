@@ -13,9 +13,16 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     
     let whatsappMessageArray :[WhatsappMessage] = [
-        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "jigyugsduiygtWe need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: "TEXT", messageStatus: "READ"),
+        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "We need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: "TEXT", messageStatus: "READ"),
         
-        WhatsappMessage(messageId: "2453", sender: WhatsappUser(profileImage: UIImage(named: "karennne")!, name: "karennne", isVerified: true), receiver: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), timestamp: Date(), messageText: "", attachments: [], messageType: "MISSED_VOICE_CALL", messageStatus: "NONE")
+        WhatsappMessage(messageId: "2453", sender: WhatsappUser(profileImage: UIImage(named: "karennne")!, name: "karennne", isVerified: true), receiver: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), timestamp: Date(), messageText: "", attachments: [], messageType: "MISSED_VOICE_CALL", messageStatus: "NONE"),
+        
+(        WhatsappMessage(messageId: "2473", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Tabitha Potter")!, name: "Tabitha Potter"), timestamp: Date(), messageText: "", attachments: [], messageType: "OUT_GOING_VOICE_CALL", messageStatus: "NONE")
+),
+        WhatsappMessage(messageId: "2473", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Martha Craig")!, name: "Martha Craig", isVerified: true), timestamp: Date(), messageText: "Great. Chat tomorrow at 11", attachments: [], messageType: "TEXT", messageStatus: "UNREAD"),
+        
+        WhatsappMessage(messageId: "2473", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "kiero_d")!, name: "kiero_d"), timestamp: Date(), messageText: "", attachments: [], messageType: "PHOTO", messageStatus: "READ")
+
     ]
     
     

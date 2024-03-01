@@ -44,10 +44,15 @@ extension HomeViewController {
             let message = whatsappMessageArray[indexPath.row]
             chatCell.contactImageView.image = message.receiver.profileImage
             chatCell.nameLabel.text = message.receiver.name
+            
+            
+            // receiver verification check
             if message.receiver.isVerified == true {
                 chatCell.verificationIconImageView.isHidden = false
+            
                 
             }
+            // message type checks
             if message.messageType == "MISSED_VOICE_CALL" {
                 chatCell.photoIconImageView.image = UIImage(named: "ic_missed_call")
                 chatCell.photoIconImageView.isHidden = false
@@ -55,7 +60,30 @@ extension HomeViewController {
                 
             } else if message.messageType == "TEXT" {
                 chatCell.recentMessageLabel.text = message.messageText
+                
+            } else if message.messageType == "OUT_GOING_VOICE_CALL" {
+                chatCell.photoIconImageView.image = UIImage(named: "Outgoing_Voice_Calls")
+                chatCell.photoIconImageView.isHidden = false
+                chatCell.recentMessageLabel.text = "Voice call"
+                
+            } else if message.messageType == "PHOTO" {
+                chatCell.photoIconImageView.image = UIImage(named: "ic_camera-2")
+                chatCell.photoIconImageView.isHidden = false
+                chatCell.recentMessageLabel.text = "Photo"
+                
             }
+            
+            // message status check
+            if message.messageStatus == "UNREAD" {
+                chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+                chatCell.messageStatusImageView.tintColor = .systemGray2
+                chatCell.messageStatusImageView.isHidden = false
+                
+            } else if message.messageStatus == "READ" {
+                chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")
+                chatCell.messageStatusImageView.isHidden = false
+            } 
+
         
            /*
             if indexPath.row == 0 {
