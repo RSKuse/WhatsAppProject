@@ -27,7 +27,7 @@ extension HomeViewController {
         if section == 0 {
             return 1
         } else {
-            return 7
+            return whatsappMessageArray.count
         }
     }
     
@@ -41,6 +41,15 @@ extension HomeViewController {
         } else {
             let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCellID", for: indexPath) as!
             ChatsTableViewCell
+            let message = whatsappMessageArray[indexPath.row]
+            chatCell.contactImageView.image = message.receiver.profileImage
+            chatCell.nameLabel.text = message.receiver.name
+            if message.receiver.isVerified == true {
+                chatCell.verificationIconImageView.isHidden = false
+                
+            }
+        
+           /*
             if indexPath.row == 0 {
                 chatCell.messageStatusImageView.isHidden = true
                 chatCell.messageStatusImageView.isHidden = true
@@ -81,6 +90,7 @@ extension HomeViewController {
                 chatCell.verificationIconImageView.isHidden = true
     
             }
+            */
             return chatCell
             
                 

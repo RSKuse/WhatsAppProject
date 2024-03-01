@@ -14,9 +14,9 @@ struct WhatsappMessage {
     let receiver : WhatsappUser
     let timestamp: Date
     let messageText: String
-    let attachments: [String]
-    let messageType: String // eg voice note, video, photo, documents, voice calls, video calls, gif. contact,message location
-    let messageStatus: String // eg Status of the message (sent, delivered, read)
+    let attachments: [String] // voice note, video, photo, documents,  gif.
+    let messageType: String // eg,text, voice calls, video calls, contact,message location
+    let messageStatus: String // eg Status of the message (sent, delivered, unread, read)
    
     // let reactions: [Reaction]
     // let referencedMessageId: String
@@ -29,10 +29,11 @@ struct WhatsappMessage {
 }
 
 struct WhatsappUser {
-    let userId : String
+    //let userId : String
     let profileImage: UIImage
     let name : String
-    let phoneNumber : String
+    var isVerified : Bool = false
+    //let phoneNumber : String
     
 
     

@@ -8,6 +8,12 @@
 import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let whatsappMessageArray :[WhatsappMessage] = [
+        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage:UIImage(named: "Martha Craig")!, name: "Martha Craig"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "We need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: "text", messageStatus: "read")
+    ]
+    
+    
+    
 //    var whatsappChatArray: [WhatsappChatModel] = [
 //        WhatsappChatModel(senderImage: UIImage(named: "Tabitha Potter")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Tabitha Potter", senderLastMessage: "We need to change something. Or we need to do it ngenye inglela. I just le...", lastMessageTimeStamp: "05:16"),
 //        WhatsappChatModel(senderImage: UIImage(named: "Maximmilian")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Nkosenhle", senderLastMessage: "Sharp Sharp. No stress.", lastMessageTimeStamp: "Yesterday"),
@@ -97,3 +103,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 }
+
+
+// creat all the other messages in the array, use different message status to ensure different icons

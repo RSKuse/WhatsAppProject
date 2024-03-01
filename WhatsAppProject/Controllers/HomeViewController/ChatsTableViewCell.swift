@@ -81,6 +81,7 @@ class ChatsTableViewCell: UITableViewCell {
     lazy var photoIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "ic_camera-2")
+        imageView.isHidden = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,19 +91,20 @@ class ChatsTableViewCell: UITableViewCell {
     lazy var verificationIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "ic_verified")
+        imageView.isHidden = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
     
-    lazy var markMessagesIconImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "Ellipse 6")
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    lazy var unreadIndicatorView: UIView = {
+        let view = UIView()
+        view.isHidden = true
+        view.layer.cornerRadius = 7
+        view.backgroundColor = .blue
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     
@@ -139,7 +141,7 @@ class ChatsTableViewCell: UITableViewCell {
         addSubview(timeStampLabel)
         addSubview(recentMessageStackView)
         addSubview(nameLabel)
-        addSubview(markMessagesIconImageView)
+        addSubview(unreadIndicatorView)
         addSubview(verificationIconImageView)
         
         
@@ -164,9 +166,10 @@ class ChatsTableViewCell: UITableViewCell {
         //recentMessageStackView.centerYAnchor.constraint(equalTo: markMessagesIconImageView.centerYAnchor).isActive = true
         recentMessageStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 11).isActive = true
         
-        markMessagesIconImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        markMessagesIconImageView.topAnchor.constraint(equalTo: timeStampLabel.bottomAnchor, constant: 6).isActive = true
-        
+        unreadIndicatorView.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
+        unreadIndicatorView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        unreadIndicatorView.widthAnchor.constraint(equalToConstant: 14).isActive = true
+        unreadIndicatorView.heightAnchor.constraint(equalToConstant: 14).isActive = true
         
         //markMessagesIconImageView.centerYAnchor.constraint(equalTo: recentMessageStackView.centerYAnchor).isActive = true
         
