@@ -360,9 +360,6 @@ struct PostType {
     let isCarousel: Bool // Indicates whether the post is a carousel
 }
 
-
-
-
 struct AppleWatchWorkout {
     let workoutId: String // Unique identifier for the workout
     let workoutType: WorkoutType // Type of the workout (e.g., running, cycling, swimming)

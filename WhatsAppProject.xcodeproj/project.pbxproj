@@ -74,6 +74,7 @@
 			children = (
 				F39228D12B87930C003C9A81 /* AppDelegate.swift */,
 				F39228EA2B87DE6E003C9A81 /* TabBarControllers.swift */,
+				F39229002B91D5B8003C9A81 /* Experiements */,
 				F39228EC2B87E198003C9A81 /* Controllers */,
 				F39228DA2B87930E003C9A81 /* Assets.xcassets */,
 				F39228DC2B87930E003C9A81 /* LaunchScreen.storyboard */,
@@ -90,7 +91,6 @@
 				F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */,
 				F39228E52B87B8E6003C9A81 /* HomeViewController+TableView.swift */,
 				F39228D52B87930C003C9A81 /* HomeViewController.swift */,
-				F39228FB2B8DD704003C9A81 /* StructModels.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -113,6 +113,14 @@
 				F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F39229002B91D5B8003C9A81 /* Experiements */ = {
+			isa = PBXGroup;
+			children = (
+				F39228FB2B8DD704003C9A81 /* StructModels.swift */,
+			);
+			path = Experiements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
