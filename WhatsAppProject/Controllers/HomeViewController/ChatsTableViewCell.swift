@@ -62,6 +62,7 @@ class ChatsTableViewCell: UITableViewCell {
     lazy var messageStatusImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Group 1-2")
+        imageView.isHidden = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false

@@ -48,6 +48,14 @@ extension HomeViewController {
                 chatCell.verificationIconImageView.isHidden = false
                 
             }
+            if message.messageType == "MISSED_VOICE_CALL" {
+                chatCell.photoIconImageView.image = UIImage(named: "ic_missed_call")
+                chatCell.photoIconImageView.isHidden = false
+                chatCell.recentMessageLabel.text = "Missed voice call"
+                
+            } else if message.messageType == "TEXT" {
+                chatCell.recentMessageLabel.text = message.messageText
+            }
         
            /*
             if indexPath.row == 0 {

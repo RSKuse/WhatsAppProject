@@ -16,7 +16,7 @@ struct WhatsappMessage {
     let messageText: String
     let attachments: [String] // voice note, video, photo, documents,  gif.
     let messageType: String // eg,text, voice calls, video calls, contact,message location
-    let messageStatus: String // eg Status of the message (sent, delivered, unread, read)
+    let messageStatus: String // eg Status of the message (sent, delivered, unread, read, None when is voice calls)
    
     // let reactions: [Reaction]
     // let referencedMessageId: String

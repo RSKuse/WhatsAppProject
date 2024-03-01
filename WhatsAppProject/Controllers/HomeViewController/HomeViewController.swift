@@ -8,8 +8,14 @@
 import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let loggedInUser = WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando")
+    
+
+    
     let whatsappMessageArray :[WhatsappMessage] = [
-        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage:UIImage(named: "Martha Craig")!, name: "Martha Craig"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "We need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: "text", messageStatus: "read")
+        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "jigyugsduiygtWe need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: "TEXT", messageStatus: "READ"),
+        
+        WhatsappMessage(messageId: "2453", sender: WhatsappUser(profileImage: UIImage(named: "karennne")!, name: "karennne", isVerified: true), receiver: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), timestamp: Date(), messageText: "", attachments: [], messageType: "MISSED_VOICE_CALL", messageStatus: "NONE")
     ]
     
     
@@ -105,4 +111,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 
-// creat all the other messages in the array, use different message status to ensure different icons
+// creat all the other messages in the array, use different message status to ensure different icons. modify the status
