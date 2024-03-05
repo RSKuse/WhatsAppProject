@@ -54,27 +54,30 @@ extension HomeViewController {
             }
             // message type checks
             if message.messageType == "MISSED_VOICE_CALL" {
-                chatCell.photoIconImageView.image = UIImage(named: "ic_missed_call")
-                chatCell.photoIconImageView.isHidden = false
+                chatCell.sentPhotoIconImageView.image = UIImage(named: "ic_missed_call")
+                chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Missed voice call"
                 
             } else if message.messageType == "TEXT" {
                 chatCell.recentMessageLabel.text = message.messageText
                 
             } else if message.messageType == "OUT_GOING_VOICE_CALL" {
-                chatCell.photoIconImageView.image = UIImage(named: "Outgoing_Voice_Calls")
-                chatCell.photoIconImageView.isHidden = false
+                chatCell.sentPhotoIconImageView.image = UIImage(named: "Outgoing_Voice_Calls")
+                chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Voice call"
                 
             } else if message.messageType == "PHOTO" {
-                chatCell.photoIconImageView.image = UIImage(named: "ic_camera-2")
-                chatCell.photoIconImageView.isHidden = false
+                chatCell.sentPhotoIconImageView.image = UIImage(named: "ic_camera-2")
+                chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Photo"
+                chatCell.unreadIndicatorView.layer.isHidden = false
+                
+            } else if message.messageType == "TEXT" {
                 
             }
             
             // message status check
-            if message.messageStatus == "UNREAD" {
+            if message.messageStatus == "SEEN" {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 chatCell.messageStatusImageView.tintColor = .systemGray2
                 chatCell.messageStatusImageView.isHidden = false
@@ -82,7 +85,13 @@ extension HomeViewController {
             } else if message.messageStatus == "READ" {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")
                 chatCell.messageStatusImageView.isHidden = false
-            } 
+                
+            } else if message.messageStatus == "DELIVERED" {
+                chatCell.messageStatusImageView.image = UIImage(named: "Group 1-3")
+                chatCell.messageStatusImageView.isHidden = false
+                
+                
+            }
 
         
            /*
