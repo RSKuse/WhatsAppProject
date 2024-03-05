@@ -17,10 +17,12 @@
 		F39228EE2B87E1BF003C9A81 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228ED2B87E1BF003C9A81 /* UpdateViewController.swift */; };
 		F39228F02B87E1D3003C9A81 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */; };
 		F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */; };
-		F39228F42B87E1F3003C9A81 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */; };
+		F39228F42B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F32B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift */; };
 		F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */; };
 		F39228FA2B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */; };
 		F39228FC2B8DD704003C9A81 /* StructModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39228FB2B8DD704003C9A81 /* StructModels.swift */; };
+		F39229022B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229012B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift */; };
+		F39229052B972A50003C9A81 /* StorageAndDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229042B972A50003C9A81 /* StorageAndDataTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +38,12 @@
 		F39228ED2B87E1BF003C9A81 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
 		F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewController.swift; sourceTree = "<group>"; };
-		F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F39228F32B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAndDataSettingViewController.swift; sourceTree = "<group>"; };
 		F39228F72B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchivedChatsTableViewCell.swift; sourceTree = "<group>"; };
 		F39228F92B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappChatModelStruct.swift; sourceTree = "<group>"; };
 		F39228FB2B8DD704003C9A81 /* StructModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructModels.swift; sourceTree = "<group>"; };
+		F39229012B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageAndDataSettingsViewController+TableView.swift"; sourceTree = "<group>"; };
+		F39229042B972A50003C9A81 /* StorageAndDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAndDataTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F39228E92B87DE14003C9A81 /* HomeViewController */,
-				F39228F32B87E1F3003C9A81 /* SettingsViewController.swift */,
+				F39229032B972971003C9A81 /* Settings */,
 				F39228ED2B87E1BF003C9A81 /* UpdateViewController.swift */,
 				F39228EF2B87E1D3003C9A81 /* CallsViewController.swift */,
 				F39228F12B87E1E5003C9A81 /* CommunitiesViewController.swift */,
@@ -121,6 +125,16 @@
 				F39228FB2B8DD704003C9A81 /* StructModels.swift */,
 			);
 			path = Experiements;
+			sourceTree = "<group>";
+		};
+		F39229032B972971003C9A81 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F39229012B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift */,
+				F39228F32B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift */,
+				F39229042B972A50003C9A81 /* StorageAndDataTableViewCell.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,13 +212,15 @@
 				F39228FC2B8DD704003C9A81 /* StructModels.swift in Sources */,
 				F39228F02B87E1D3003C9A81 /* CallsViewController.swift in Sources */,
 				F39228FA2B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift in Sources */,
+				F39229052B972A50003C9A81 /* StorageAndDataTableViewCell.swift in Sources */,
 				F39228D62B87930C003C9A81 /* HomeViewController.swift in Sources */,
 				F39228EB2B87DE6E003C9A81 /* TabBarControllers.swift in Sources */,
 				F39228D22B87930C003C9A81 /* AppDelegate.swift in Sources */,
+				F39229022B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift in Sources */,
 				F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */,
 				F39228EE2B87E1BF003C9A81 /* UpdateViewController.swift in Sources */,
 				F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */,
-				F39228F42B87E1F3003C9A81 /* SettingsViewController.swift in Sources */,
+				F39228F42B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
