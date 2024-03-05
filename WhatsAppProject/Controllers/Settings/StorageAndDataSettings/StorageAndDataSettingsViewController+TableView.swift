@@ -11,10 +11,6 @@ import UIKit
 
 extension StorageAndDataSettingsViewController {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(48.0)
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -22,7 +18,6 @@ extension StorageAndDataSettingsViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return storageArray.count
-            
         } else if section == 1 {
             return networkArray.count
             
@@ -31,6 +26,60 @@ extension StorageAndDataSettingsViewController {
         }
     }
     
+    /*
+    - How to setup the view for header in section.
+     */
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 0 {
+            let whatsappHelpGraphic = WhatsappHelpGraphicView()
+            return whatsappHelpGraphic
+        } else if section == 1 {
+            let sectionView = TableSectionHeaderView()
+            sectionView.titleLabel.text = "NETWORK"
+            return sectionView
+        } else {
+            let sectionView = TableSectionHeaderView()
+            sectionView.titleLabel.text = "MEDIA AUTO-DOWNLOAD"
+            return sectionView
+        }
+    }
+    
+    /*
+     - How to setup up the height for the header in section
+     */
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == 0 {
+            return CGFloat(500.0)
+        }
+        return CGFloat(48.0)
+    }
+    
+    /*
+     - How to setup up the view for header in section
+     */
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section == 2 {
+            let footerView = TableSectionHeaderView()
+            footerView.titleLabel.text = "Voice Messages are always automatically download"
+            return footerView
+        }
+        return nil // Because the returned type is optional i.e. UIView"?", you can return a nil value i.e. return nothing.
+    }
+    
+    
+    /*
+     - How to setup up the height for the footer in section
+     */
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        if section == 2 {
+            return CGFloat(48)
+        }
+        return CGFloat(0)
+    }
+    
+    /*
+     - Cell For Row at Index Path
+     */
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
@@ -102,6 +151,14 @@ extension StorageAndDataSettingsViewController {
             
             
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(48.0)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
 }

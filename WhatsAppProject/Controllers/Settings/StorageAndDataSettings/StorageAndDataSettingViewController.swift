@@ -16,7 +16,7 @@ class StorageAndDataSettingsViewController: UIViewController, UITableViewDelegat
 
     
     lazy var storageAndDataTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
