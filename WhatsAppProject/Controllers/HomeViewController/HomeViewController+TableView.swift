@@ -53,40 +53,39 @@ extension HomeViewController {
                 
             }
             // message type checks
-            if message.messageType == "MISSED_VOICE_CALL" {
+            if message.messageType == .incomingVoiceCall {
                 chatCell.sentPhotoIconImageView.image = UIImage(named: "ic_missed_call")
                 chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Missed voice call"
                 
-            } else if message.messageType == "TEXT" {
+            } else if message.messageType == .text {
                 chatCell.recentMessageLabel.text = message.messageText
                 
-            } else if message.messageType == "OUT_GOING_VOICE_CALL" {
+            } else if message.messageType == .outgoingVoiceCall {
                 chatCell.sentPhotoIconImageView.image = UIImage(named: "Outgoing_Voice_Calls")
                 chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Voice call"
                 
-            } else if message.messageType == "PHOTO" {
+            } else if message.messageType == .photo {
                 chatCell.sentPhotoIconImageView.image = UIImage(named: "ic_camera-2")
                 chatCell.sentPhotoIconImageView.isHidden = false
                 chatCell.recentMessageLabel.text = "Photo"
                 chatCell.unreadIndicatorView.layer.isHidden = false
                 
-            } else if message.messageType == "TEXT" {
-                
             }
+
             
             // message status check
-            if message.messageStatus == "SEEN" {
+            if message.messageStatus == .delivered {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 chatCell.messageStatusImageView.tintColor = .systemGray2
                 chatCell.messageStatusImageView.isHidden = false
                 
-            } else if message.messageStatus == "READ" {
+            } else if message.messageStatus == .sent {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")
                 chatCell.messageStatusImageView.isHidden = false
                 
-            } else if message.messageStatus == "DELIVERED" {
+            } else if message.messageStatus == .read {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-3")
                 chatCell.messageStatusImageView.isHidden = false
                 
