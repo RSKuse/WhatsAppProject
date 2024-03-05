@@ -20,7 +20,6 @@ class StorageAndDataTableViewCell: UITableViewCell {
     
     lazy var selectedTypeLable: UILabel = {
         let label = UILabel()
-        label.text = ""
         label.textColor = .lightGray
         label.textAlignment = .right
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -52,7 +51,7 @@ class StorageAndDataTableViewCell: UITableViewCell {
         titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        selectedTypeLable.rightAnchor.constraint(equalTo: rightAnchor, constant: -25).isActive = true
+        selectedTypeLable.rightAnchor.constraint(equalTo: rightAnchor, constant: -35).isActive = true
         selectedTypeLable.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
 
         
