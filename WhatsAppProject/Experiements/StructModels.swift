@@ -189,13 +189,9 @@ struct ContactInfo {
     let phoneNumber: String
 }
 
-struct MessageType {
-    let type: String // eg voice note, video, photo, documents, voice calls, video calls, gif
-}
-
-struct MessageStatus {
-    let status: String // eg Status of the message (sent, delivered, read)
-}
+//struct MessageStatus {
+//    let status: String // eg Status of the message (sent, delivered, read)
+//}
 
 struct Reaction {
     let userId: String // Identifying  the user who reacted
@@ -359,9 +355,6 @@ struct PostType {
     let isVideo: Bool // Indicates whether the post is a video
     let isCarousel: Bool // Indicates whether the post is a carousel
 }
-
-
-
 
 struct AppleWatchWorkout {
     let workoutId: String // Unique identifier for the workout

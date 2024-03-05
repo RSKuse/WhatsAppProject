@@ -8,6 +8,28 @@
 import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let loggedInUser = WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando")
+
+    let whatsappMessageArray :[WhatsappMessage] = [
+        WhatsappMessage(messageId: "1233", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Maximmilian")!, name: "Max", isVerified: false), timestamp: Date(), messageText: "We need to change something. Or we need to do it ngenye inglela", attachments: [], messageType: MessageType.text, messageStatus: .delivered),
+        
+        WhatsappMessage(messageId: "2453", sender: WhatsappUser(profileImage: UIImage(named: "karennne")!, name: "karennne", isVerified: true), receiver: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), timestamp: Date(), messageText: "", attachments: [], messageType: .incomingVoiceCall, messageStatus: .none),
+        
+        WhatsappMessage(messageId: "2471", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Tabitha Potter")!, name: "Tabitha Potter"), timestamp: Date(), messageText: "", attachments: [], messageType: .outgoingVoiceCall, messageStatus: .none),
+        
+        WhatsappMessage(messageId: "2472", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Martha Craig")!, name: "Martha Craig", isVerified: true), timestamp: Date(), messageText: "Great. Chat tomorrow at 11", attachments: [], messageType: .text, messageStatus: .delivered),
+        
+        WhatsappMessage(messageId: "2473", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "kiero_d")!, name: "Kiero_d"), timestamp: Date(), messageText: "", attachments: [], messageType: .photo, messageStatus: .sent),
+        
+        WhatsappMessage(messageId: "2474", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "karennne")!, name: "Karennne"), timestamp: Date(), messageText: "Alright. Next week sounds great. we can meet at our usual coffee", attachments: [], messageType: .text, messageStatus: .sent),
+        
+        WhatsappMessage(messageId: "2475", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Kurosaki_Uchiha")!, name: "Kurosaki_Uchiha"), timestamp: Date(), messageText: "Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.", attachments: [], messageType: .text, messageStatus: .none)
+    
+
+    ]
+    
+    
+    
 //    var whatsappChatArray: [WhatsappChatModel] = [
 //        WhatsappChatModel(senderImage: UIImage(named: "Tabitha Potter")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Tabitha Potter", senderLastMessage: "We need to change something. Or we need to do it ngenye inglela. I just le...", lastMessageTimeStamp: "05:16"),
 //        WhatsappChatModel(senderImage: UIImage(named: "Maximmilian")!, senderIcon: UIImage(named: "Group 1-2")!, markReadIcon: UIImage(named: "Ellipse 6")!, senderName: "Nkosenhle", senderLastMessage: "Sharp Sharp. No stress.", lastMessageTimeStamp: "Yesterday"),
@@ -97,3 +119,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 
 
 }
+
+
+// creat all the other messages in the array, use different message status to ensure different icons. modify the status
