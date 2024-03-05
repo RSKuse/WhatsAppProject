@@ -34,11 +34,15 @@ extension HomeViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
+            print(indexPath.section)
             let archiveCell = tableView.dequeueReusableCell(withIdentifier: "ArchivedChatsTableViewCellID", for: indexPath) as!
             ArchivedChatsTableViewCell
             return archiveCell
-            
         } else {
+            
+            print(indexPath.section)
+            print(indexPath.row)
+            
             let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCellID", for: indexPath) as!
             ChatsTableViewCell
             let message = whatsappMessageArray[indexPath.row]
@@ -49,9 +53,8 @@ extension HomeViewController {
             // receiver verification check
             if message.receiver.isVerified == true {
                 chatCell.verificationIconImageView.isHidden = false
-            
-                
             }
+            
             // message type checks
             if message.messageType == .incomingVoiceCall {
                 chatCell.sentPhotoIconImageView.image = UIImage(named: "ic_missed_call")
@@ -74,8 +77,7 @@ extension HomeViewController {
                 
             }
 
-            
-            // message status check
+            // message status checks
             if message.messageStatus == .delivered {
                 chatCell.messageStatusImageView.image = UIImage(named: "Group 1-2")?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
                 chatCell.messageStatusImageView.tintColor = .systemGray2
@@ -135,6 +137,7 @@ extension HomeViewController {
     
             }
             */
+            
             return chatCell
             
                 
