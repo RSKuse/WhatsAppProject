@@ -25,10 +25,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         WhatsappMessage(messageId: "2475", sender: WhatsappUser(profileImage: UIImage(named: "Thando")!, name: "Thando"), receiver: WhatsappUser(profileImage: UIImage(named: "Kurosaki_Uchiha")!, name: "Kurosaki_Uchiha"), timestamp: Date(), messageText: "Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live.", attachments: [], messageType: .text, messageStatus: .none)
     
-
     ]
-    
- 
     
     lazy var whatsappTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)

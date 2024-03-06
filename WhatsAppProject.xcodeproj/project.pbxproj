@@ -25,6 +25,9 @@
 		F39229052B972A50003C9A81 /* StorageAndDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229042B972A50003C9A81 /* StorageAndDataTableViewCell.swift */; };
 		F39229072B976733003C9A81 /* TableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229062B976733003C9A81 /* TableSectionHeaderView.swift */; };
 		F39229092B976B0E003C9A81 /* WhatsappelpGraphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229082B976B0E003C9A81 /* WhatsappelpGraphicView.swift */; };
+		F39229112B988CA3003C9A81 /* HomeSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229102B988CA3003C9A81 /* HomeSettingViewController.swift */; };
+		F39229142B9898F3003C9A81 /* HomeSettingViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229132B9898F3003C9A81 /* HomeSettingViewController+TableView.swift */; };
+		F39229172B989961003C9A81 /* HomeSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229162B989961003C9A81 /* HomeSettingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		F39229042B972A50003C9A81 /* StorageAndDataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageAndDataTableViewCell.swift; sourceTree = "<group>"; };
 		F39229062B976733003C9A81 /* TableSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionHeaderView.swift; sourceTree = "<group>"; };
 		F39229082B976B0E003C9A81 /* WhatsappelpGraphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsappelpGraphicView.swift; sourceTree = "<group>"; };
+		F39229102B988CA3003C9A81 /* HomeSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingViewController.swift; sourceTree = "<group>"; };
+		F39229132B9898F3003C9A81 /* HomeSettingViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeSettingViewController+TableView.swift"; sourceTree = "<group>"; };
+		F39229162B989961003C9A81 /* HomeSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSettingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +139,7 @@
 		F39229032B972971003C9A81 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				F392290D2B9771AC003C9A81 /* Notifications */,
+				F39229122B988CB1003C9A81 /* HomeSettingScreens */,
 				F392290C2B9771A6003C9A81 /* StorageAndDataSettings */,
 			);
 			path = Settings;
@@ -168,11 +174,22 @@
 			path = StorageAndDataSettings;
 			sourceTree = "<group>";
 		};
-		F392290D2B9771AC003C9A81 /* Notifications */ = {
+		F39229122B988CB1003C9A81 /* HomeSettingScreens */ = {
 			isa = PBXGroup;
 			children = (
+				F39229102B988CA3003C9A81 /* HomeSettingViewController.swift */,
+				F39229132B9898F3003C9A81 /* HomeSettingViewController+TableView.swift */,
+				F39229152B98993F003C9A81 /* Components */,
 			);
-			path = Notifications;
+			path = HomeSettingScreens;
+			sourceTree = "<group>";
+		};
+		F39229152B98993F003C9A81 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F39229162B989961003C9A81 /* HomeSettingTableViewCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +264,7 @@
 			files = (
 				F39228E62B87B8E6003C9A81 /* HomeViewController+TableView.swift in Sources */,
 				F39228E82B87D2E5003C9A81 /* ChatsTableViewCell.swift in Sources */,
+				F39229142B9898F3003C9A81 /* HomeSettingViewController+TableView.swift in Sources */,
 				F39228FC2B8DD704003C9A81 /* StructModels.swift in Sources */,
 				F39228F02B87E1D3003C9A81 /* CallsViewController.swift in Sources */,
 				F39228FA2B8D1ADB003C9A81 /* WhatsappChatModelStruct.swift in Sources */,
@@ -254,10 +272,12 @@
 				F39228D62B87930C003C9A81 /* HomeViewController.swift in Sources */,
 				F39228EB2B87DE6E003C9A81 /* TabBarControllers.swift in Sources */,
 				F39228D22B87930C003C9A81 /* AppDelegate.swift in Sources */,
+				F39229112B988CA3003C9A81 /* HomeSettingViewController.swift in Sources */,
 				F39229092B976B0E003C9A81 /* WhatsappelpGraphicView.swift in Sources */,
 				F39229022B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift in Sources */,
 				F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */,
 				F39229072B976733003C9A81 /* TableSectionHeaderView.swift in Sources */,
+				F39229172B989961003C9A81 /* HomeSettingTableViewCell.swift in Sources */,
 				F39228EE2B87E1BF003C9A81 /* UpdateViewController.swift in Sources */,
 				F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */,
 				F39228F42B87E1F3003C9A81 /* StorageAndDataSettingViewController.swift in Sources */,
