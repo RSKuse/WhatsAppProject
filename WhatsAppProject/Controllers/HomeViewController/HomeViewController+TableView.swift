@@ -34,14 +34,10 @@ extension HomeViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            print(indexPath.section)
             let archiveCell = tableView.dequeueReusableCell(withIdentifier: "ArchivedChatsTableViewCellID", for: indexPath) as!
             ArchivedChatsTableViewCell
             return archiveCell
         } else {
-            
-            print(indexPath.section)
-            print(indexPath.row)
             
             let chatCell = tableView.dequeueReusableCell(withIdentifier: "ChatsTableViewCellID", for: indexPath) as!
             ChatsTableViewCell

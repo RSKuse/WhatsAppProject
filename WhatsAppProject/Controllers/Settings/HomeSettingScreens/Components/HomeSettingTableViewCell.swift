@@ -15,7 +15,7 @@ class HomeSettingTableViewCell: UITableViewCell {
         imageView.image = UIImage(named: "Thando")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 20
+        imageView.layer.cornerRadius = 30
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -23,7 +23,7 @@ class HomeSettingTableViewCell: UITableViewCell {
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Thando"
-        label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.regular)
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -34,7 +34,7 @@ class HomeSettingTableViewCell: UITableViewCell {
         label.text = "Available"
         label.textColor = .lightGray
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -55,7 +55,7 @@ class HomeSettingTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 12.5
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -85,8 +85,8 @@ class HomeSettingTableViewCell: UITableViewCell {
         addSubview(qrCodeImageView)
         addSubview(settingsImageView)
         
-        contactImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        contactImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        contactImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        contactImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
         contactImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         contactImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true   
         
@@ -94,8 +94,8 @@ class HomeSettingTableViewCell: UITableViewCell {
         labelStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         qrCodeImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        qrCodeImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        qrCodeImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        qrCodeImageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        qrCodeImageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
         qrCodeImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         settingsImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true

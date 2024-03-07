@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 
 class HomeSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var profileArray = ["Kuse", "Avatar"]
+    var broadcastArray = ["Broadcast Lists", "Starred Messages", "Linked Devices"]
+    var accountsPrivacyChatsNotificationStorageAndDataArray = ["Account", "Privacy", "Chats", "Notifications", "Storage and Data"]
+    var helpTellAFriendArray = ["Help", "Tell a Friend"]
  
     lazy var settingsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
