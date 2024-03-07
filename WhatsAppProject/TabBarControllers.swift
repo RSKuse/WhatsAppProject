@@ -55,7 +55,7 @@ class TabBarController: UITabBarController {
         let settingsTabBarItem = UITabBarItem(title: "Settings",
                                               image: UIImage(named: "icon_messages"),
                                               selectedImage: UIImage(named: "icon_messages_selected"))
-        let settingController = UINavigationController(rootViewController: StorageAndDataSettingsViewController())
+        let settingController = UINavigationController(rootViewController: HomeSettingViewController())
         settingController.tabBarItem = settingsTabBarItem
         
         self.viewControllers = [updatesController, callsController, communitiesController, chatsController, settingController]

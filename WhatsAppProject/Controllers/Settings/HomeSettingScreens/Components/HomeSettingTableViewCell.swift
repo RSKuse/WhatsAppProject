@@ -9,32 +9,68 @@ import Foundation
 import UIKit
 
 class HomeSettingTableViewCell: UITableViewCell {
+   
+    lazy var contactImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "Thando")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 20
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
     
     lazy var titleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
+        label.text = "Thando"
         label.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.regular)
         label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var selectedTypeLable: UILabel = {
+    lazy var descriptionLable: UILabel = {
         let label = UILabel()
+        label.text = "Available"
         label.textColor = .lightGray
         label.textAlignment = .right
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var theSwitch: UISwitch = {
-        let theSwitch = UISwitch()
-        theSwitch.isOn = false
-        theSwitch.isHidden = true
-        theSwitch.translatesAutoresizingMaskIntoConstraints = false
-        return theSwitch
+    lazy var labelStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLable])
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 1.0
+        stackView.alignment = .leading
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
+    lazy var qrCodeImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "qr_code_icon-3")
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
+        imageView.layer.cornerRadius = 10
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
+    lazy var settingsImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "heart_icon-6")
+        imageView.isHidden = true
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 12
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+ 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
         accessoryType = .disclosureIndicator
@@ -42,21 +78,31 @@ class HomeSettingTableViewCell: UITableViewCell {
     }
     
     func setupUI() {
-        theSwitch.frame = CGRect(x: 5, y: 5, width: 100, height: contentView.frame.size.height-10)
+        addSubview(contactImageView)
         addSubview(titleLabel)
-        addSubview(theSwitch)
-        addSubview(selectedTypeLable)
+        addSubview(descriptionLable)
+        addSubview(labelStackView)
+        addSubview(qrCodeImageView)
+        addSubview(settingsImageView)
         
+        contactImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        contactImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        contactImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
+        contactImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true   
         
-        titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
-        titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        labelStackView.leftAnchor.constraint(equalTo: contactImageView.rightAnchor, constant: 14).isActive = true
+        labelStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        selectedTypeLable.rightAnchor.constraint(equalTo: rightAnchor, constant: -35).isActive = true
-        selectedTypeLable.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-
+        qrCodeImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
+        qrCodeImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        qrCodeImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        qrCodeImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        theSwitch.rightAnchor.constraint(equalTo: rightAnchor, constant: -16).isActive = true
-        theSwitch.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        settingsImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        settingsImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        settingsImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
+        settingsImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+  
     }
     
     required init?(coder: NSCoder) {

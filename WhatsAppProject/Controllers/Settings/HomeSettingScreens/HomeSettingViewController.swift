@@ -10,7 +10,6 @@ import UIKit
 
 class HomeSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
  
-    
     lazy var settingsTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.delegate = self
@@ -20,11 +19,18 @@ class HomeSettingViewController: UIViewController, UITableViewDelegate, UITableV
     
     }()
     
+//    lazy var qrView: QRCodeContainerView = {
+//        let view = QRCodeContainerView()
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
         self.view.backgroundColor = .systemGray4
         setupUI()
+        registerCell()
   
     }
     
@@ -39,8 +45,7 @@ class HomeSettingViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func registerCell() {
-        settingsTableView.register(HomeSettingTableViewCell.self, forCellReuseIdentifier: "HomeSettingTableViewCellID")
-        
+        settingsTableView.register(HomeSettingTableViewCell.self, forCellReuseIdentifier: "HomeSettingTableViewCellID")   
     }
     
     
