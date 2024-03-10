@@ -53,8 +53,8 @@ class TabBarController: UITabBarController {
         chatsController.tabBarItem = chatsTabBarItem
        
         let settingsTabBarItem = UITabBarItem(title: "Settings",
-                                              image: UIImage(named: "icon_messages"),
-                                              selectedImage: UIImage(named: "icon_messages_selected"))
+                                              image: UIImage(named: "icon_setting"),
+                                              selectedImage: UIImage(named: "icon_setting"))
         let settingController = UINavigationController(rootViewController: HomeSettingViewController())
         settingController.tabBarItem = settingsTabBarItem
         

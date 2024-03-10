@@ -55,7 +55,7 @@ class HomeSettingTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.backgroundColor = UIColor.gray.withAlphaComponent(0.2)
-        imageView.layer.cornerRadius = 12.5
+        imageView.layer.cornerRadius = 15
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -63,20 +63,31 @@ class HomeSettingTableViewCell: UITableViewCell {
     lazy var settingsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "heart_icon-6")
-        imageView.isHidden = true
+        imageView.isHidden = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 12
+        imageView.layer.cornerRadius = 10
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
+    lazy var iconNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Avatar"
+        label.textColor = .black
+        label.textAlignment = .right
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
  
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
         accessoryType = .disclosureIndicator
         setupUI()
     }
-    
+
     func setupUI() {
         addSubview(contactImageView)
         addSubview(titleLabel)
@@ -84,6 +95,7 @@ class HomeSettingTableViewCell: UITableViewCell {
         addSubview(labelStackView)
         addSubview(qrCodeImageView)
         addSubview(settingsImageView)
+        addSubview(iconNameLabel)
         
         contactImageView.heightAnchor.constraint(equalToConstant: 60).isActive = true
         contactImageView.widthAnchor.constraint(equalToConstant: 60).isActive = true
@@ -94,14 +106,17 @@ class HomeSettingTableViewCell: UITableViewCell {
         labelStackView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         qrCodeImageView.rightAnchor.constraint(equalTo: rightAnchor, constant: -20).isActive = true
-        qrCodeImageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        qrCodeImageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        qrCodeImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        qrCodeImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         qrCodeImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        settingsImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        settingsImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        settingsImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+        settingsImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
         settingsImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         settingsImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        
+        iconNameLabel.leftAnchor.constraint(equalTo: settingsImageView.rightAnchor, constant: 12).isActive = true
+        iconNameLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
   
     }
     
