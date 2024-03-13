@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         self.view.backgroundColor = .white
         setupTabBar()
         setupViewControllers()
-        selectedIndex = 3
+        // selectedIndex = 3
     }
     
     func setupTabBar() {
@@ -29,7 +29,7 @@ class TabBarController: UITabBarController {
         let updateTabBarItem = UITabBarItem(title: "Updates",
                                           image: UIImage(named: "icon_messages"),
                                           selectedImage: UIImage(named: "icon_messages_selected"))
-        let updatesController = UINavigationController(rootViewController: UpdateViewController())
+        let updatesController = UINavigationController(rootViewController: ChannelsAndChatsViewController())
         updatesController.tabBarItem = updateTabBarItem
         
       

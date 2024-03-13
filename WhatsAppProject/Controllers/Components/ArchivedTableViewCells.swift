@@ -1,14 +1,14 @@
 //
-//  ArchivedChatsTableViewCell.swift
+//  ArchivedTableViewCells.swift
 //  WhatsAppProject
 //
-//  Created by Reuben Simphiwe Kuse on 2024/02/25.
+//  Created by Reuben Simphiwe Kuse on 2024/03/12.
 //
 
 import Foundation
 import UIKit
 
-class ArchivedChatsTableViewCell: UITableViewCell {
+class ArchivedTableViewCells: UITableViewCell {
     
     lazy var archivedImageView: UIImageView = {
         let imageView = UIImageView()

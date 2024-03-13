@@ -63,7 +63,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.iconNameLabel.text = "Avatar"
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
@@ -79,7 +79,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
                 settingsCell.accessoryType = .disclosureIndicator
@@ -88,7 +88,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
                 settingsCell.accessoryType = .disclosureIndicator
@@ -97,7 +97,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
                 settingsCell.accessoryType = .disclosureIndicator
@@ -112,7 +112,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
                 settingsCell.accessoryType = .disclosureIndicator
@@ -121,7 +121,7 @@ extension HomeSettingViewController {
                 settingsCell.contactImageView.isHidden = true
                 settingsCell.titleLabel.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
-                settingsCell.settingsImageView.image = UIImage(named: "ic_achieve")
+                settingsCell.settingsImageView.image = UIImage(named: "archive_filled_icon")
                 settingsCell.qrCodeImageView.isHidden = true
                 settingsCell.descriptionLable.isHidden = true
                 settingsCell.accessoryType = .disclosureIndicator
