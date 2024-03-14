@@ -33,7 +33,7 @@ class StatusCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .clear
+//        backgroundColor = .black
 //        layer.cornerRadius = 20
 //        layer.borderWidth = 1.0
 //        layer.borderColor = UIColor.lightGray.cgColor 
@@ -46,7 +46,7 @@ class StatusCollectionViewCell: UICollectionViewCell {
         addSubview(userNameLabel)
         
         statusImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        statusImageView.topAnchor.constraint(equalTo: topAnchor, constant: -20).isActive = true
+        statusImageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         statusImageView.widthAnchor.constraint(equalToConstant: 72).isActive = true
         statusImageView.heightAnchor.constraint(equalToConstant: 72).isActive = true
         

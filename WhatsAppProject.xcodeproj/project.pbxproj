@@ -257,13 +257,29 @@
 			isa = PBXGroup;
 			children = (
 				F392294B2BA06DF2003C9A81 /* ChatsTableViewCells.swift */,
+				F392295B2BA2FE64003C9A81 /* StatusTableViewCell */,
+				F392294D2BA06E23003C9A81 /* ArchivedTableViewCells.swift */,
+				F392295C2BA2FE92003C9A81 /* ChannelsTableViewCells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F392295B2BA2FE64003C9A81 /* StatusTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
 				F39229572BA26C8B003C9A81 /* StatusTableViewCell.swift */,
 				F39229592BA26F6E003C9A81 /* StatusCollectionViewCell.swift */,
-				F392294D2BA06E23003C9A81 /* ArchivedTableViewCells.swift */,
+			);
+			path = StatusTableViewCell;
+			sourceTree = "<group>";
+		};
+		F392295C2BA2FE92003C9A81 /* ChannelsTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
 				F392294F2BA06E55003C9A81 /* ChannelsTableViewCell.swift */,
 				F39229552BA07970003C9A81 /* ChannelsCollectionViewCell.swift */,
 			);
-			path = Components;
+			path = ChannelsTableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

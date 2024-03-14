@@ -16,8 +16,10 @@ class StatusTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         flowLayout.minimumLineSpacing = 8.0
 //        flowLayout.minimumInteritemSpacing = 0
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        collectionView.backgroundColor = UIColor.clear
+//        collectionView.backgroundColor = UIColor.blue
         //collectionView.layer.cornerRadius = 36
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.contentInset = UIEdgeInsets(top: 0.0, left: 16, bottom: 0, right: 16)
         collectionView.isScrollEnabled = true
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -39,7 +41,7 @@ class StatusTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
         super.init(style: UITableViewCell.CellStyle.default, reuseIdentifier: reuseIdentifier)
         setupView()
         registerCollectionCell()
-        backgroundColor = UIColor.white
+//        backgroundColor = UIColor.red
     }
         
     
@@ -54,9 +56,9 @@ class StatusTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollecti
 //        statusCollectionView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
         statusCollectionView.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
-        statusCollectionView.topAnchor.constraint(equalTo: topAnchor, constant: 30).isActive = true
+        statusCollectionView.topAnchor.constraint(equalTo: titlelabel.bottomAnchor, constant: 10).isActive = true
         statusCollectionView.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
-        statusCollectionView.heightAnchor.constraint(equalToConstant: 140).isActive = true
+        statusCollectionView.heightAnchor.constraint(equalToConstant: 130).isActive = true
         
         titlelabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
         titlelabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
@@ -84,7 +86,7 @@ extension StatusTableViewCell {
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 72, height: 72)
+        return CGSize(width: 72, height: 130)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

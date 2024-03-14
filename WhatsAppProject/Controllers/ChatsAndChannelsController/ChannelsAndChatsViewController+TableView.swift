@@ -14,7 +14,7 @@ extension ChannelsAndChatsViewController {
         if indexPath.section == 0 {
             return 260
         } else if indexPath.section == 1 {
-            return 200
+            return 160
         } else {
             if indexPath.row == 0 {
                 return 40
