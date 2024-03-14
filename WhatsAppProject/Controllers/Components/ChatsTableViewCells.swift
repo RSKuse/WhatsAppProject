@@ -1,14 +1,14 @@
 //
-//  ChatsTableViewCell.swift
+//  ChatsTableViewCells.swift
 //  WhatsAppProject
 //
-//  Created by Reuben Simphiwe Kuse on 2024/02/22.
+//  Created by Reuben Simphiwe Kuse on 2024/03/12.
 //
 
 import Foundation
 import UIKit
 
-class ChatsTableViewCell: UITableViewCell {
+class ChatsTableViewCells: UITableViewCell {
     
     lazy var contactImageView: UIImageView = {
         let imageView = UIImageView()
