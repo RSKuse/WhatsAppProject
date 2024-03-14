@@ -13,6 +13,8 @@ extension ChannelsAndChatsViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return 260
+        } else if indexPath.section == 1 {
+            return 200
         } else {
             if indexPath.row == 0 {
                 return 40
@@ -23,11 +25,13 @@ extension ChannelsAndChatsViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
+            return 1
+        } else if section == 1 {
             return 1
         } else {
             return  whatsappMessageArray.count + 1
@@ -40,6 +44,10 @@ extension ChannelsAndChatsViewController {
             let channelCell = tableView.dequeueReusableCell(withIdentifier: "ChannelsTableViewCellID", for: indexPath) as!
             ChannelsTableViewCell
             return channelCell
+        } else if indexPath.section == 1 {
+            let statusCell = tableView.dequeueReusableCell(withIdentifier: "StatusTableViewCellID", for: indexPath) as!
+            StatusTableViewCell
+            return statusCell
         } else {
             if indexPath.row == 0 {
                 let archiveCells = tableView.dequeueReusableCell(withIdentifier: "ArchivedTableViewCellsID", for: indexPath)as! ArchivedTableViewCells

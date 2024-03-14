@@ -105,6 +105,7 @@ class ChannelsAndChatsViewController: UIViewController, UITableViewDelegate, UIT
         whatsappTableView.register(ChatsTableViewCells.self, forCellReuseIdentifier: "red")
         whatsappTableView.register(ArchivedTableViewCells.self, forCellReuseIdentifier: "ArchivedTableViewCellsID")
         whatsappTableView.register(ChannelsTableViewCell.self, forCellReuseIdentifier: "ChannelsTableViewCellID")
+        whatsappTableView.register(StatusTableViewCell.self, forCellReuseIdentifier: "StatusTableViewCellID")
         
     }
     

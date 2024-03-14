@@ -39,7 +39,7 @@ class ChannelsCollectionViewCell: UICollectionViewCell {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         button.layer.cornerRadius = 15.0
         button.translatesAutoresizingMaskIntoConstraints = false
-        //button.addTarget(self, action: #selector(followButtonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(followButtonAction), for: .touchUpInside)
         return button
     }()
     
@@ -70,7 +70,6 @@ class ChannelsCollectionViewCell: UICollectionViewCell {
         
         followButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         followButton.topAnchor.constraint(equalTo:ChannelCompanyNameLabel.bottomAnchor, constant: 10).isActive = true
-        //followButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 8).isActive = true
         followButton.widthAnchor.constraint(equalToConstant: 118).isActive = true
         followButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
@@ -80,7 +79,11 @@ class ChannelsCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     @objc func followButtonAction() {
-    
+        if followButton.title(for: .normal) == "Follow" {
+            followButton.setTitle("Unfollow", for: .normal)
+        } else {
+            followButton.setTitle("Follow", for: .normal)
+        }
     }
+    
 }
-

@@ -40,6 +40,8 @@
 		F39229522BA0714D003C9A81 /* CollectionViewFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229512BA0714D003C9A81 /* CollectionViewFunc.swift */; };
 		F39229542BA0716E003C9A81 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229532BA0716E003C9A81 /* CollectionViewCell.swift */; };
 		F39229562BA07970003C9A81 /* ChannelsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229552BA07970003C9A81 /* ChannelsCollectionViewCell.swift */; };
+		F39229582BA26C8B003C9A81 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229572BA26C8B003C9A81 /* StatusTableViewCell.swift */; };
+		F392295A2BA26F6E003C9A81 /* StatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39229592BA26F6E003C9A81 /* StatusCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,8 @@
 		F39229512BA0714D003C9A81 /* CollectionViewFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFunc.swift; sourceTree = "<group>"; };
 		F39229532BA0716E003C9A81 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F39229552BA07970003C9A81 /* ChannelsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F39229572BA26C8B003C9A81 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewCell.swift; sourceTree = "<group>"; };
+		F39229592BA26F6E003C9A81 /* StatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				F392294B2BA06DF2003C9A81 /* ChatsTableViewCells.swift */,
+				F39229572BA26C8B003C9A81 /* StatusTableViewCell.swift */,
+				F39229592BA26F6E003C9A81 /* StatusCollectionViewCell.swift */,
 				F392294D2BA06E23003C9A81 /* ArchivedTableViewCells.swift */,
 				F392294F2BA06E55003C9A81 /* ChannelsTableViewCell.swift */,
 				F39229552BA07970003C9A81 /* ChannelsCollectionViewCell.swift */,
@@ -346,6 +352,7 @@
 				F39229192B99AA01003C9A81 /* QRCodeContainerView.swift in Sources */,
 				F39228EB2B87DE6E003C9A81 /* TabBarControllers.swift in Sources */,
 				F39229522BA0714D003C9A81 /* CollectionViewFunc.swift in Sources */,
+				F392295A2BA26F6E003C9A81 /* StatusCollectionViewCell.swift in Sources */,
 				F39228D22B87930C003C9A81 /* AppDelegate.swift in Sources */,
 				F39229112B988CA3003C9A81 /* HomeSettingViewController.swift in Sources */,
 				F39229562BA07970003C9A81 /* ChannelsCollectionViewCell.swift in Sources */,
@@ -357,6 +364,7 @@
 				F39229022B972857003C9A81 /* StorageAndDataSettingsViewController+TableView.swift in Sources */,
 				F39228F22B87E1E5003C9A81 /* CommunitiesViewController.swift in Sources */,
 				F39229072B976733003C9A81 /* TableSectionHeaderView.swift in Sources */,
+				F39229582BA26C8B003C9A81 /* StatusTableViewCell.swift in Sources */,
 				F39229172B989961003C9A81 /* HomeSettingTableViewCell.swift in Sources */,
 				F39228EE2B87E1BF003C9A81 /* UpdateViewController.swift in Sources */,
 				F39228F82B8BDFFC003C9A81 /* ArchivedChatsTableViewCell.swift in Sources */,
